@@ -10,15 +10,35 @@
 
 
 <body>
-    <div id="chart"></div>
+    <p id="title">Understanding Narrative Visualization: A Journey through COVID-19 Daily Cases and Deaths in the US</p>
+    <div id="scenes">
+        <div id="chart"></div>
+        <div id="legend"></div>
+
+        <label for="dateSlider">Select Date:</label>
+        <input type="range" id="dateSlider" min="0" max="1157" step="1" value="1157">
+        <label for="dateSlider" id="currentDate"></label>
+    </div>
+    <div id="desc"><p>Data is presented with an overview map showcasing COVID-19 daily cases and deaths for each state in the US on a specific date. Please use the select date slider to select a date of interest to view the COVID-19 daily cases and deaths. Color scale is implemented to the map indicating the darker the worse.</p><p>Click a specific state to view more insight details.</p></div>
+
+    <button id="reloadButton">Start Over</button>
+
+    <script>
+        // Add event listener to the button
+        document.getElementById("reloadButton").addEventListener("click", function() {
+            // Reload the page when the button is clicked
+            location.reload();
+        });
+    </script>
 
     <!-- Load d3.js -->
     <script src="https://d3js.org/d3.v7.min.js"></script>
     <!-- Load d3 topojson client -->
     <script src="https://unpkg.com/topojson-client@3"></script>
     <!-- Load d3-annotation -->
-    <script src="https://rawgit.com/susielu/d3-annotation/master/d3-annotation.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-annotation/2.5.1/d3-annotation.min.js" integrity="sha512-iBAeBWWWFb8HqSBcrqcz98iIpuVH1la39dEYHtyQ/pGpeCQTQVvLJOWAuhv2Q7JSHp9k7hWA7sGxU3hHJe+tFg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <script src="main.js"></script>
+    <script src="annotation.js"></script>
 </body>
 
 </html>

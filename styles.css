@@ -1,4 +1,25 @@
-path {
+.chart path, #legend path {
     stroke: #fff;
     stroke-width: 1;
+}
+
+#legend {
+    position: absolute;
+    top: 100px;
+    right: 20px;
+}
+
+p#title {
+    font-size: x-large;
+    text-align: center;
+}
+
+.tooltip {
+    position: absolute;
+    pointer-events: none;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 8px;
+    border: 1px solid #ccc;
+    font-size: 12px;
+    line-height: 1.4;
 }
