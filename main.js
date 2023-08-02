@@ -243,7 +243,7 @@ d3.csv("./nytimes_covid-19-data_master_us-states.csv").then(function (data) {
                             X-axis represents states from left to right the least to the worst, while Y-axis represents the daily cases number. In the bar chart, the top 
                             indicates the daily COVID-19 cases while the bottom indicates the deaths. Bar colors are implemented with a color scale indicating the darker 
                             the worse.</p>
-                            <p>Feel free to ZOOM in/out to view partial data or CLICK start over for other filters. Have fun with your have fun with your exploration. Thanks:)</p>`);
+                            <p>Feel free to ZOOM in/out to view partial data or CLICK start over for other filters. Have fun with your exploration. Thanks:)</p>`);
 
                             const tooltip3 = d3.select("#scene3")
                                 .append("div")
